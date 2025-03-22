@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "my-mcp-server": {
+      "url": "http://localhost:3001/sse"
+    }
+  }
+}
