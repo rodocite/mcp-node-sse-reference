@@ -1,11 +1,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { echoTool } from "./echo";
 import { calculatorTool } from "./calculator";
-
+import { weatherTool } from "./weather";
 // All available tools
 const tools: McpTool[] = [
-  echoTool,
-  calculatorTool
+  // echoTool,
+  calculatorTool,
+  weatherTool,
   // Add more tools here as needed
 ];
 
