@@ -6,6 +6,7 @@ import { z } from "zod";
 declare global {
   interface McpTool {
     name: string;
+    description: string;
     schema: Record<string, z.ZodType>;
     handler: (
       args: Record<string, any>,

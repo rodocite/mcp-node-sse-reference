@@ -5,6 +5,7 @@ import { z } from "zod";
  */
 export const calculatorTool: McpTool = {
   name: "calculator",
+  description: "Calculator tool - performs basic math operations",
   schema: {
     operation: z.enum(["add", "subtract", "multiply", "divide"]),
     a: z.number(),

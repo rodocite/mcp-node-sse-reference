@@ -5,6 +5,7 @@ import { z } from "zod";
  */
 export const weatherTool: McpTool = {
   name: "weather",
+  description: "Weather tool - gets the weather for a given location",
   schema: { location: z.string() },
   handler: async (args: Record<string, any>, _extra: any) => {
     const { location } = args;
@@ -12,11 +13,11 @@ export const weatherTool: McpTool = {
       content: [
         {
           type: "text",
-          text: `{
-        "location": "${location}",
-        "temperature": 20,
-        "weather": "sandstorm"
-      }`,
+          text: JSON.stringify({
+            location,
+            temperature: 20,
+            weather: "sandstorm",
+          }),
         },
       ],
     };
